@@ -22,7 +22,7 @@ class BaseDocxTemplate:
         """
         if type not in DOCUMENT_TYPE or not DOCX_TEMPLATE[type][name]:
             raise NotAllowedDocumentationTypeError(
-                'Не получается определить путь документации документации для `%s`' % type
+                'Не получается определить путь документации для `%s`' % type
             )
         self.type, self.name = type, name
         return copy.deepcopy(DOCX_TEMPLATE[type][name])
